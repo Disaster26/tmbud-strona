@@ -3,8 +3,8 @@ Theme Name: TM-BUD
 Theme URI: https://tm-bud.pl/
 Author: Wylinka
 Author URI: https://wylinka.pl/
-Description: Lekki motyw strony TM-BUD sp. z o.o. (generalny wykonawca, Skierniewice). Treści w zwykłym edytorze WordPressa: Strony, Zakres prac, Realizacje, Aktualności. Dane firmy w Wygląd > Dostosuj. Bez page buildera.
-Version: 1.0.0
+Description: Lekki motyw strony TM-BUD sp. z o.o. (generalny wykonawca, Skierniewice). Treści w zwykłym edytorze WordPressa: Strony, Zakres prac, Realizacje, Referencje, Aktualności. Dane firmy w Wygląd > Dostosuj. Bez page buildera.
+Version: 1.1.0
 Requires at least: 6.4
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
@@ -139,7 +139,7 @@ p{margin:0}
 .r-typ{position:absolute;left:-6px;bottom:18px;z-index:3;padding:8px 16px;font-weight:700;font-size:14.5px;line-height:1.2;color:#fff;background:var(--pas);border:2px solid var(--ink);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4);max-width:calc(100% - 24px)}
 .r-opis{padding-top:20px}
 .r h2,.r h3{font-size:25px;font-weight:800;font-stretch:108%;line-height:1.15}
-.r-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 18px;margin:14px 0 0;padding-top:12px;border-top:3px solid var(--ink)}
+.r-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;margin:14px 0 0;padding-top:12px;border-top:3px solid var(--ink)}
 .r-meta dt{font-size:12.5px;font-weight:600;color:var(--steel)}
 .r-meta dd{margin:2px 0 0;font-weight:600;font-size:15.5px;line-height:1.35}
 .r-gdzie{color:var(--blue-t);font-weight:600;font-size:15px;margin:8px 0}
@@ -406,3 +406,35 @@ address{font-style:normal;margin-top:14px;color:var(--txt)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media print{.top,.mob,.cta,.mapa,.form{display:none}}
+
+/* 16.11: drugi telefon, godziny, linki realizacji, referencje, powiększanie zdjęć */
+.k-tel2{margin-top:2px;font-size:clamp(26px,2.4vw,34px)}
+.k-godz{margin:6px 0 0;font-weight:600;color:var(--steel)}
+.st-godz{color:#9aa4ad;font-size:14px}
+.st-kontakt .st-tel2{font-weight:800;font-size:19px;font-stretch:110%}
+.real-linki{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:0 0 44px}
+.real-linki .btn-fb{margin-top:0}
+.fot-lb{display:block;width:100%;height:100%;cursor:zoom-in}
+.ref{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px}
+.ref-pdf{display:flex;flex-direction:column;height:100%;text-decoration:none;color:var(--txt)}
+.ref-min{display:block;aspect-ratio:210/297;overflow:hidden;background:#fff;border:3px solid var(--ink);box-shadow:inset 0 0 0 3px #fff}
+.ref-min img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .25s ease}
+.ref-pdf:hover .ref-min img{transform:scale(1.03)}
+.ref-pdf b{margin-top:14px;font-stretch:105%;font-size:17px;line-height:1.3;color:var(--ink)}
+.ref-opis{margin-top:4px;font-size:15px;line-height:1.45}
+.ref-otworz{margin-top:auto;padding-top:10px;font-weight:700;font-size:14.5px;color:var(--blue-t)}
+.ref-pdf:hover .ref-otworz{text-decoration:underline}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,11,12,.94);display:flex;align-items:center;justify-content:center;padding:56px 64px 64px}
+.lb[hidden]{display:none}
+.lb-img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 0 0 3px #fff}
+.lb-pod{position:absolute;left:16px;right:16px;bottom:14px;margin:0;color:#e6e9ec;font-size:14.5px;text-align:center}
+.lb button{position:absolute;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:0;background:var(--red);color:#fff;cursor:pointer;box-shadow:inset 0 -4px 0 var(--red-d)}
+.lb button svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.6}
+.lb-x{top:10px;right:10px}
+.lb-prev{left:10px;top:50%;transform:translateY(-50%)}
+.lb-next{right:10px;top:50%;transform:translateY(-50%)}
+.lb-jedno .lb-n{display:none}
+.lb-otwarte,.lb-otwarte body{overflow:hidden}
+@media (max-width:760px){.lb{padding:60px 8px 56px}.lb-prev,.lb-next{top:auto;bottom:6px;transform:none}.lb-pod{bottom:62px}}
+.k-tel{display:table}
+@media (max-width:360px){.hero .lead{font-size:15px;line-height:1.5}}
