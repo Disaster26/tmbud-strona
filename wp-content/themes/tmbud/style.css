@@ -438,3 +438,5 @@ address{font-style:normal;margin-top:14px;color:var(--txt)}
 @media (max-width:760px){.lb{padding:60px 8px 56px}.lb-prev,.lb-next{top:auto;bottom:6px;transform:none}.lb-pod{bottom:62px}}
 .k-tel{display:table}
 @media (max-width:360px){.hero .lead{font-size:15px;line-height:1.5}}
+.marka b{white-space:nowrap}
+@media (min-width:1061px) and (max-width:1280px){.menu{gap:18px}.menu a{font-size:15px}.top-tel{padding-left:14px;padding-right:14px}}
